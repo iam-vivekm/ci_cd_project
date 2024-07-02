@@ -28,5 +28,14 @@ after enter the password install suggested plugins.
 
 Step 3. Build a project
 
-- click on create a job, enter the item name, click on freestyle and then on.
-- in the general -> GitHub project -> Project url <enter gihub repo url> 
+- to build a job we have top create a ssh keygen so that git hub repo and server can communicate.
+- on the server type ssh-keygen, it will give you two secret key. one is public and other one is private. We will use public key in github and private key in jenkins.
+  - go to guthub and click on settings
+  - click on SSH and GPG keys
+  - click on new ssh key
+  - enter the title and paste your public key here.
+  - now go to jenkins and under general -> source code management -> git -> repository url <paste github repo url>
+  - under credentials click on jenkins -> kind -> ssh username with private key -> ID(whatever you want to name it) -> username(server username) -> private key -> enter directly and paste your private key here.
+  - click on add and save.
+
+ - check all the setting is configured or not so click on build now.
