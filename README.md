@@ -39,3 +39,10 @@ Step 3. Build a project
   - click on add and save.
 
  - check all the setting is configured or not so click on build now.
+
+Step 4. Run the code
+- cd /var/lib/jenkins/workspace/project_name
+- apt insatll nodejs -y
+- apt install npm
+- npm install
+- node app.js
