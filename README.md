@@ -72,4 +72,14 @@ Step 6. use jenkins so that you don't have to run docker commands manually.
 - docker run -d --name cont_name -p 8000:8000 image_name
 - now click on build now it will automatic create a container and run app.
 
-- 
+ Step 7. CI CD
+ - for ci cd you have to install github integration plugin in jenkins
+ - after that go to setting of repo
+ - go to webhook
+ - add webhook
+ - paste punlicip:8080/github-webhook/ under the payload url
+ - under the jenkins
+ - go to configure
+ - under Build Triggers
+ - click on GitHub hook trigger for GITScm polling
+Now whenever a new code push in the repo then the pipeline automatically triggerd.
