@@ -46,3 +46,30 @@ Step 4. Run the code
 - apt install npm
 - npm install
 - node app.js
+- now open the browser and copy yourpublicip:8080
+
+  Step 5. if you want to run app using docker.
+  - install docker
+  - apt-get install docker.io
+  - # build dockerfile
+  - vi Docker file
+FROM node
+WORKDIR app
+COPY . .
+RUN npm install
+EXPOSE 8000
+CMD ["node","app.js"]
+- docker build . -t image_name
+- docker run -d --name container_name -p 8080:8080 image_name
+  
+now go to browser and use public_ip:8080
+
+Step 6. use jenkins so that you don't have to run docker commands manually.
+- click on configure
+- Build Steps
+- Execute shell
+- docker build . -t image_name
+- docker run -d --name cont_name -p 8080:8080 image_name
+- now click on build now it will automatic create a container and run app.
+
+- 
