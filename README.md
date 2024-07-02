@@ -69,7 +69,7 @@ Step 6. use jenkins so that you don't have to run docker commands manually.
 - Build Steps
 - Execute shell
 - docker build . -t image_name
-- docker run -d --name cont_name -p 8080:8080 image_name
+- docker run -d --name cont_name -p 8000:8000 image_name
 - now click on build now it will automatic create a container and run app.
 
 - 
